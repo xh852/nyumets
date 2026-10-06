@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYUMets_Brain v1.0 · NYUMets</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="/assets/css/nocturne.css">
+<link rel="stylesheet" href="/assets/css/nm-redesign.css">
+</head>
+<body>
+<div class="nm-wrap">
+<header class="nm-nav">
+  <a class="nm-brand" href="/">
+    <span class="nm-icon"><img src="/assets/img/logo.png" alt=""></span>
+    <span>NYU<b>Mets</b></span>
+  </a>
+  <nav class="nm-links">
+    <a href="/">Home</a>
+    <a href="/docs/brainapi">Docs</a>
+    <a href="/blog">News</a>
+    <a href="/about/theteam">Team</a>
+    <a href="/docs/contact">Contact</a>
+    <a href="https://github.com/nyumets/nyumets.github.io/discussions" target="_blank" rel="noopener">Discussion <i class="ph ph-arrow-up-right"></i></a>
+    <a class="btn btn-primary" href="https://datacatalog.med.nyu.edu/dataset/10624" target="_blank" rel="noopener">Request access <i class="ph ph-arrow-up-right"></i></a>
+  </nav>
+  <button class="btn btn-icon btn-secondary nm-menu" aria-label="Menu" aria-expanded="false"><i class="ph ph-list" style="font-size:20px"></i></button>
+</header>
+
+<main><article class="nm-page nm-article">
+  <a href="/blog" class="nm-back"><i class="ph ph-arrow-left"></i>News</a>
+  <header class="nm-article-head">
+    <div class="nm-article-meta"><span class="tag tag-accent">NYUMets</span><span>March 29, 2022</span></div>
+    <h1>NYUMets_Brain v1.0</h1>
+    <p class="nm-lede">Introducing NYUMets</p>
+  </header>
+  
+  <div class="nm-prose"><p>This post is to announce our first data release and scientific project, <a href="https://www.nature.com/articles/s41467-024-52414-2"><strong>NYUMets_Brain v1.0</strong></a>. The dataset was extracted from one of the world’s largest clinical registeries of metastatic brain cancer. We chose to begin our initiative with a focus on metastatic brain cancer for many reasons. Metastatic brain cancer is particularly hard to treat, as the brain’s natural resistance mechanisms and fragility also make it more difficult to treat using standard drugs, radiation techniques, and surgery. On the other hand, the imaging data is particularly easy to standardize and manipulate relative to imaging within other organ systems.</p>
+
+<p>This dataset is most notable for its focus on encouraging scientists and clinicians alike to focus on cancer dynamics - how does metastatic cancer change over time? What can this tell us about such a complex disease? However, the dataset encompasses:<br /></p>
+
+<p>1429 patients with an average of 6 imaging studies per patient over an average time of 17 months
+8003 MRI studies containing the following sequences: 
+Expert segmentations: 2367
+T1 pre contrast: 5,542
+T1 post contrast: 7,245
+High-res T1 post contrast: 1,462
+T2: 6,920
+FLAIR: 5,322
+4860 timepoints of clinical follow-up
+81,562 medication updates <br /></p>
+
+<p>The concept of cancer dynamics and using data science to better understand this incredibly complex phenomenon are what is most important though, and that is why this dataset is being accompanied by the release of the NYUMets API and an accompantying scientific paper for both structuring the data as well as accessing it computationally and offering some of our initial thoughts towards new ways of thinking about metastatic cancer and leveraging the dataset. We need to fundamentally rethink how we approach cancer analytics if we are to better understand and ultimately treat it. When physicians think about cancer they think about it many different dimensions and modalities: genetics, imaging, clinical, sociological, and so forth. Even more importantly though, physicians don’t just think about cancer as an independent entity, but as a disease belonging to a human being who is living in time with their cancer. Thinking in terms of time is fundamental to how we perceive cancer as people, but it is so often absent from how we model it as computer scientists. NYUMets, starting with metastatic brain cancer v1.0, is our attempt to change this way of thinking.<br /></p>
+
+<p><strong><em>Katherine E. Link</em></strong> <br />
+<strong><em>Machine Learning Engineer, NYU OLAB</em></strong> <br /></p>
+
+<h3 id="participating-nyu-langone-teams">Participating NYU Langone Teams</h3>
+<p><a href="https://nyuolab.org/"><strong>NYU OLAB</strong></a><br />
+<a href="https://med.nyu.edu/departments-institutes/neurosurgery/"><strong>NYU Department of Neurosurgery</strong></a><br />
+<a href="https://med.nyu.edu/departments-institutes/radiation-oncology/"><strong>NYU Department of Radiation Oncology</strong></a><br />
+<a href="https://med.nyu.edu/departments-institutes/radiology/"><strong>NYU Department of Radiology</strong></a><br />
+<a href="https://cai2r.net/"><strong>CAI2R</strong></a><br />
+<a href="https://cds.nyu.edu/"><strong>NYU Center for Data Science</strong></a><br />
+<a href="https://nyulangone.org/locations/perlmutter-cancer-center"><strong>NYU Langone Health Perlmutter Cancer Center</strong></a><br /></p>
+</div>
+  <div class="nm-article-tags"><a class="tag tag-neutral" href="/tags#nyumets">NYUMets</a><a class="tag tag-neutral" href="/tags#nyumets-brain">NYUMets_brain</a></div>
+</article>
+</main>
+<footer class="nm-foot">
+  <span>© 2026 NYUMets · NYU Grossman School of Medicine · NYU Center for Data Science</span>
+  <nav><a href="mailto:admin@nyumets.org">admin@nyumets.org</a></nav>
+</footer>
+
+</div>
+<script>
+document.querySelector('.nm-menu').addEventListener('click', function () {
+  var l = document.querySelector('.nm-links'); l.classList.toggle('open');
+  this.setAttribute('aria-expanded', l.classList.contains('open'));
+});
+</script>
+</body>
+</html>

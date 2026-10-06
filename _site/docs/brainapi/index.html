@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brain API docs · NYUMets</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="/assets/css/nocturne.css">
+<link rel="stylesheet" href="/assets/css/nm-redesign.css">
+</head>
+<body>
+<div class="nm-wrap">
+<header class="nm-nav">
+  <a class="nm-brand" href="/">
+    <span class="nm-icon"><img src="/assets/img/logo.png" alt=""></span>
+    <span>NYU<b>Mets</b></span>
+  </a>
+  <nav class="nm-links">
+    <a href="/">Home</a>
+    <a href="/docs/brainapi" class="on">Docs</a>
+    <a href="/blog">News</a>
+    <a href="/about/theteam">Team</a>
+    <a href="/docs/contact">Contact</a>
+    <a href="https://github.com/nyumets/nyumets.github.io/discussions" target="_blank" rel="noopener">Discussion <i class="ph ph-arrow-up-right"></i></a>
+    <a class="btn btn-primary" href="https://datacatalog.med.nyu.edu/dataset/10624" target="_blank" rel="noopener">Request access <i class="ph ph-arrow-up-right"></i></a>
+  </nav>
+  <button class="btn btn-icon btn-secondary nm-menu" aria-label="Menu" aria-expanded="false"><i class="ph ph-list" style="font-size:20px"></i></button>
+</header>
+
+<main><div class="nm-docs">
+<aside class="nm-side-wrap"><div class="nm-side" id="nm-tabs"><h6 style="color:var(--color-neutral-500);margin:0 0 10px">NYUMets_Brain</h6></div>
+<div class="nm-side nm-tools"><h6 style="color:var(--color-neutral-500);margin:24px 0 10px">Tools</h6><a class="nm-tab" href="/docs/monaiapi"><i class="ph ph-cube"></i>NYUMets MONAI API</a></div></aside>
+<div>
+<div style="font-size:12px;color:var(--color-neutral-500);margin-bottom:10px">Docs / Clinical data / <span data-k="label"></span></div>
+<h1 style="font-size:36px;margin:0 0 10px"><span data-k="label"></span> dataset</h1>
+<p style="font-size:15px;color:var(--color-neutral-300);max-width:720px;margin:0 0 24px" data-k="desc"></p>
+<div style="display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap">
+<div style="position:relative;width:340px;max-width:100%"><i class="ph ph-magnifying-glass" style="position:absolute;left:10px;top:11px;color:var(--color-neutral-500)"></i><input class="input" id="nm-q" style="padding-left:32px;min-height:40px;width:100%" placeholder="Filter variables" aria-label="Filter variables"></div>
+<span style="font-size:12px;color:var(--color-neutral-500)" id="nm-count"></span>
+</div>
+<table class="table" style="width:100%"><thead><tr><th style="width:250px">Variable</th><th style="width:70px">Type</th><th>Description</th><th style="width:250px">Key</th></tr></thead><tbody id="nm-rows"></tbody></table>
+<p id="nm-empty" hidden style="padding:28px 6px;font-size:14px;color:var(--color-neutral-500)">No variables match. Try another table.</p>
+</div>
+</div>
+<script>
+(function () {
+  var docs = [{"label":"Time series","icon":"ph ph-chart-line","desc":"Each row is a point in time, in days from the patient’s initial gamma knife radiosurgery: medication changes, imaging with references to raw files, procedures, follow-up visits and outcomes.","rows":[["patient_identifier","int","Randomly generated 8-digit identifier unique to each patient",""],["visit_class","int","Type of event this row records","1 Medication · 2 Gamma Knife · 3 Image · 4 Follow Up · 5 Death"],["time_from_gk_days","int","Time indexed from initial gamma knife procedure, in days",""],["time_from_diagnosis_days","int","Time indexed from primary cancer diagnosis, in days",""],["image_id","int","10-digit identifier for each cranial imaging study, linked to the imaging dataset",""],["total_vol_all_targets","float","Volume in cm³ of all gamma knife targets from this procedure",""],["margin_dose_largest","float","Margin dose in Gy of the largest target in this plan",""],["macdonaldcriteria","int","Tumor response of the largest tumor by MacDonald criteria","1 Complete · 2 Partial · 3 Stable · 4 Progression"],["kps_fu","int","Karnofsky Performance Status at follow-up",""],["cause_of_death","int","Cause of death, if the patient died","1 Brain mets · 2 Systemic · 3 Other"]]},{"label":"Individual","icon":"ph ph-user","desc":"Each row is one patient, with demographic details, cancer history, presenting symptoms, neurologic exam at first evaluation and summary outcomes.","rows":[["patient_identifier","int","Randomly generated 8-digit identifier unique to each patient",""],["age_diagnosis","int","Age at primary cancer diagnosis",""],["primary_histology","int","Primary cancer diagnosis","1 Lung · 2 Melanoma · 3 Breast · … 13 Lymphoma"],["extent_of_disease_init","int","Extent of disease at initial gamma knife evaluation","1 Brain only … 4 Brain, primary, >1 site"],["num_tumors_init","int","Number of intracranial metastases at initial evaluation",""],["rpa","int","RTOG recursive partitioning analysis class","1 · 2 · 3"],["total_fu_time","int","Total follow-up in days from initial gamma knife",""],["days_to_death_from_gk","int","Days from initial gamma knife until death",""]]},{"label":"Gamma Knife details","icon":"ph ph-crosshair","desc":"Each row is one gamma knife target, giving per-target detail for the radiosurgery plans in the time series.","rows":[["gk_id","int","9-digit identifier unique to each gamma knife procedure",""],["target_count","int","Count of targets indexed from 1, per plan",""],["largest_target_in_plan","int","Whether this is the plan’s largest target","0 No · 1 Yes"],["target_volume","float","Volume of outlined target in cm³",""],["pci","float","Paddick Conformity Index of the target",""],["gri","float","Gradient index of the target",""],["margin_dose","float","Margin dose in Gy",""],["volume_12gy","float","Volume of tissue in cm³ receiving 12 Gy",""]]},{"label":"Imaging metadata","icon":"ph ph-brain","desc":"Each row is a point in time with cranial imaging, keyed to the time series by image_id.","rows":[["image_id","int","10-digit identifier unique to each cranial imaging study",""],["image_count","int","Count of imaging events indexed from 1, per patient",""],["image_available","int","Whether raw imaging is available","0 No · 1 Yes"]]}];
+  var tab = 0, q = '', tabsEl = document.getElementById('nm-tabs'), rowsEl = document.getElementById('nm-rows');
+  function esc(s) { return String(s).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); }
+  docs.forEach(function (d, i) {
+    var b = document.createElement('button'); b.className = 'nm-tab'; b.innerHTML = '<i class="' + d.icon + '"></i>' + esc(d.label);
+    b.onclick = function () { tab = i; render(); }; tabsEl.appendChild(b);
+  });
+  document.getElementById('nm-q').oninput = function (e) { q = e.target.value.trim().toLowerCase(); render(); };
+  function render() {
+    var d = docs[tab];
+    tabsEl.querySelectorAll('.nm-tab').forEach(function (b, i) { b.classList.toggle('on', i === tab); });
+    document.querySelectorAll('[data-k=label]').forEach(function (e) { e.textContent = d.label; });
+    document.querySelector('[data-k=desc]').textContent = d.desc;
+    var rows = d.rows.filter(function (r) { return !q || r[0].indexOf(q) > -1 || r[2].toLowerCase().indexOf(q) > -1; });
+    rowsEl.innerHTML = rows.map(function (r) {
+      return '<tr><td class="nm-var">' + esc(r[0]) + '</td><td><span class="tag tag-neutral">' + esc(r[1]) + '</span></td><td style="color:var(--color-neutral-200)">' + esc(r[2]) + '</td><td style="font-size:12px;color:var(--color-neutral-400)">' + esc(r[3] || '—') + '</td></tr>';
+    }).join('');
+    document.getElementById('nm-count').textContent = rows.length + ' of ' + d.rows.length + ' shown';
+    document.getElementById('nm-empty').hidden = rows.length > 0;
+  }
+  render();
+})();
+</script>
+</main>
+<footer class="nm-foot">
+  <span>© 2026 NYUMets · NYU Grossman School of Medicine · NYU Center for Data Science</span>
+  <nav><a href="mailto:admin@nyumets.org">admin@nyumets.org</a></nav>
+</footer>
+
+</div>
+<script>
+document.querySelector('.nm-menu').addEventListener('click', function () {
+  var l = document.querySelector('.nm-links'); l.classList.toggle('open');
+  this.setAttribute('aria-expanded', l.classList.contains('open'));
+});
+</script>
+</body>
+</html>

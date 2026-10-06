@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team · NYUMets</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="/assets/css/nocturne.css">
+<link rel="stylesheet" href="/assets/css/nm-redesign.css">
+</head>
+<body>
+<div class="nm-wrap">
+<header class="nm-nav">
+  <a class="nm-brand" href="/">
+    <span class="nm-icon"><img src="/assets/img/logo.png" alt=""></span>
+    <span>NYU<b>Mets</b></span>
+  </a>
+  <nav class="nm-links">
+    <a href="/">Home</a>
+    <a href="/docs/brainapi">Docs</a>
+    <a href="/blog">News</a>
+    <a href="/about/theteam" class="on">Team</a>
+    <a href="/docs/contact">Contact</a>
+    <a href="https://github.com/nyumets/nyumets.github.io/discussions" target="_blank" rel="noopener">Discussion <i class="ph ph-arrow-up-right"></i></a>
+    <a class="btn btn-primary" href="https://datacatalog.med.nyu.edu/dataset/10624" target="_blank" rel="noopener">Request access <i class="ph ph-arrow-up-right"></i></a>
+  </nav>
+  <button class="btn btn-icon btn-secondary nm-menu" aria-label="Menu" aria-expanded="false"><i class="ph ph-list" style="font-size:20px"></i></button>
+</header>
+
+<main><div class="nm-page" style="padding-bottom:24px"><h1>The team</h1><p class="nm-lede" style="margin:0">Physicians, scientists, graduate and medical students, and software engineers working to understand and treat metastatic cancer through computer science.</p></div>
+<div class="nm-olab">
+
+<div><h6 style="color:var(--color-accent);margin:0 0 6px">Research home</h6><div style="font-family:var(--font-heading);font-size:20px;font-weight:600;margin-bottom:4px"><a href="https://nyuolab.org/" target="_blank" rel="noopener" style="color:inherit">OLAB AI Research Group</a></div><div style="font-size:14px;color:var(--color-neutral-300);max-width:640px">NYUMets is built within <a href="https://nyuolab.org/" target="_blank" rel="noopener">OLAB</a>, the AI research group at NYU Langone led by Eric Karl Oermann, working on AI for medicine and neuroscience.</div></div>
+<a class="btn btn-secondary" href="https://nyuolab.org/" target="_blank" rel="noopener">nyuolab.org <i class="ph ph-arrow-up-right"></i></a>
+</div>
+<div class="nm-team-grid">
+
+<a href="/about/erickoermann" style="display:flex;flex-direction:column;gap:12px;color:inherit">
+<div class="nm-ph" style="aspect-ratio:4/3"><img src="/assets/img/oermann_talk_violakeh_bright.png" alt="Eric Karl Oermann, MD" style="object-position:60% 15%"></div>
+<div><span class="tag tag-accent">Principal Investigator</span><div style="font-size:19px;font-weight:500;margin-top:8px">Eric Karl Oermann, MD</div><div style="font-size:13px;color:var(--color-neutral-400)">Assistant Professor of Neurosurgery, Radiology, and Data Science</div></div>
+</a>
+
+<a href="/about/douglaskondziolka" style="display:flex;flex-direction:column;gap:12px;color:inherit">
+<div class="nm-ph" style="aspect-ratio:4/3"><img src="/assets/img/Kondziolka_2021_Neurosurgery.jpg" alt="Douglas Kondziolka, MD" style="object-position:150% 40%"></div>
+<div><span class="tag tag-accent">Clinical lead</span><div style="font-size:19px;font-weight:500;margin-top:8px">Douglas Kondziolka, MD</div><div style="font-size:13px;color:var(--color-neutral-400)">Professor of Neurosurgery, NYU Langone Health</div></div>
+</a>
+
+<a href="/about/klink" style="display:flex;flex-direction:column;gap:12px;color:inherit">
+<div class="nm-ph" style="aspect-ratio:4/3"><img src="/assets/img/link.jpeg" alt="Katherine E. Link" style="object-position:50% 35%"></div>
+<div><span class="tag tag-accent">Machine Learning Engineer</span><div style="font-size:19px;font-weight:500;margin-top:8px">Katherine E. Link</div><div style="font-size:13px;color:var(--color-neutral-400)">NYU Langone Health</div></div>
+</a>
+
+</div>
+<div class="nm-roster">
+<div><h6 style="color:var(--color-neutral-500);margin:4px 0 6px">NYU Langone Health</h6><div style="font-size:13px;color:var(--color-neutral-500)">(alphabetical order)</div></div>
+<div class="nm-names"><span>Juan Diego Alzate</span><span>Kenneth Bernstein</span><span>Viola J. Chen</span><span>Shannon Ciprut</span><span>John Golfinos</span><span>Lavender Yao Jiang</span><span>Frederick Kwon</span><span>Christopher Xujin Liu</span><span>Yvonne Liu</span><span>Mustafa Nasir-Moin</span><span>Daniel Orringer</span><span>Tanxia Qiu</span><span>Zane Schnurman</span><span>Erik Sulman</span></div>
+<h6 style="color:var(--color-neutral-500);margin:4px 0 0">Collaborators</h6>
+<div class="nm-names"><span>Erin Chu <small>(AWS Open Data Initiative)</small></span><span>Anthony Costa <small>(NVIDIA)</small></span><span>Michael Liu <small>(Bearwave LLC)</small></span></div>
+</div>
+</main>
+<footer class="nm-foot">
+  <span>© 2026 NYUMets · NYU Grossman School of Medicine · NYU Center for Data Science</span>
+  <nav><a href="mailto:admin@nyumets.org">admin@nyumets.org</a></nav>
+</footer>
+
+</div>
+<script>
+document.querySelector('.nm-menu').addEventListener('click', function () {
+  var l = document.querySelector('.nm-links'); l.classList.toggle('open');
+  this.setAttribute('aria-expanded', l.classList.contains('open'));
+});
+</script>
+</body>
+</html>

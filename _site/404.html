@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · NYUMets</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="/assets/css/nocturne.css">
+<link rel="stylesheet" href="/assets/css/nm-redesign.css">
+</head>
+<body>
+<div class="nm-wrap">
+<header class="nm-nav">
+  <a class="nm-brand" href="/">
+    <span class="nm-icon"><img src="/assets/img/logo.png" alt=""></span>
+    <span>NYU<b>Mets</b></span>
+  </a>
+  <nav class="nm-links">
+    <a href="/">Home</a>
+    <a href="/docs/brainapi">Docs</a>
+    <a href="/blog">News</a>
+    <a href="/about/theteam">Team</a>
+    <a href="/docs/contact">Contact</a>
+    <a href="https://github.com/nyumets/nyumets.github.io/discussions" target="_blank" rel="noopener">Discussion <i class="ph ph-arrow-up-right"></i></a>
+    <a class="btn btn-primary" href="https://datacatalog.med.nyu.edu/dataset/10624" target="_blank" rel="noopener">Request access <i class="ph ph-arrow-up-right"></i></a>
+  </nav>
+  <button class="btn btn-icon btn-secondary nm-menu" aria-label="Menu" aria-expanded="false"><i class="ph ph-list" style="font-size:20px"></i></button>
+</header>
+
+<main><div class="nm-404">
+<h6 class="nm-404-kicker">RUFF! YOU GOT US.</h6>
+<div class="nm-404-num">
+<span>4</span>
+<span class="nm-404-ring">
+<span class="nm-404-shadow"></span>
+<span class="nm-404-clip"><img src="/assets/img/404-otto.png" alt=""></span>
+<span class="nm-404-stroke"></span>
+<span class="nm-404-ears"><span><img src="/assets/img/404-otto.png" alt="Otto the corgi"></span></span>
+</span>
+<span class="nm-404-right">4</span>
+</div>
+<div class="nm-404-cap">Otto da corgi, our lab dog</div>
+<p class="nm-404-lede">While my hooman colleagues are working on this, check out the links below!</p>
+<div class="nm-row" style="justify-content:center">
+<a class="btn btn-secondary" href="/">Back to home <i class="ph ph-arrow-right"></i></a>
+<a class="btn btn-secondary" href="/docs/brainapi">Brain API docs <i class="ph ph-arrow-right"></i></a>
+<a class="btn btn-secondary" href="https://nyuolab.org/research/our-work" target="_blank" rel="noopener">Cool Science <i class="ph ph-arrow-up-right"></i></a>
+<a class="btn btn-secondary" href="https://github.com/nyumets/nyumets.github.io/discussions" target="_blank" rel="noopener">Report a broken link <i class="ph ph-arrow-up-right"></i></a>
+</div>
+</div>
+</main>
+<footer class="nm-foot">
+  <span>© 2026 NYUMets · NYU Grossman School of Medicine · NYU Center for Data Science</span>
+  <nav><a href="mailto:admin@nyumets.org">admin@nyumets.org</a></nav>
+</footer>
+
+</div>
+<script>
+document.querySelector('.nm-menu').addEventListener('click', function () {
+  var l = document.querySelector('.nm-links'); l.classList.toggle('open');
+  this.setAttribute('aria-expanded', l.classList.contains('open'));
+});
+</script>
+</body>
+</html>

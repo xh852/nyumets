@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katherine E. Link · NYUMets</title>
+<meta name="description" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="/assets/css/nocturne.css">
+<link rel="stylesheet" href="/assets/css/nm-redesign.css">
+</head>
+<body>
+<div class="nm-wrap">
+<header class="nm-nav">
+  <a class="nm-brand" href="/">
+    <span class="nm-icon"><img src="/assets/img/logo.png" alt=""></span>
+    <span>NYU<b>Mets</b></span>
+  </a>
+  <nav class="nm-links">
+    <a href="/">Home</a>
+    <a href="/docs/brainapi">Docs</a>
+    <a href="/blog">News</a>
+    <a href="/about/theteam" class="on">Team</a>
+    <a href="/docs/contact">Contact</a>
+    <a href="https://github.com/nyumets/nyumets.github.io/discussions" target="_blank" rel="noopener">Discussion <i class="ph ph-arrow-up-right"></i></a>
+    <a class="btn btn-primary" href="https://datacatalog.med.nyu.edu/dataset/10624" target="_blank" rel="noopener">Request access <i class="ph ph-arrow-up-right"></i></a>
+  </nav>
+  <button class="btn btn-icon btn-secondary nm-menu" aria-label="Menu" aria-expanded="false"><i class="ph ph-list" style="font-size:20px"></i></button>
+</header>
+
+<main>
+<div class="nm-profile">
+<div class="nm-ph" style="aspect-ratio:4/5;border-radius:var(--radius-lg)"><img src="/assets/img/link.jpeg" alt="Katherine E. Link"></div>
+<div style="padding-top:12px">
+<a href="/about/theteam" style="font-size:13px;color:var(--color-neutral-500);margin-bottom:22px;display:inline-flex;gap:6px;align-items:center"><i class="ph ph-arrow-left"></i>The team</a>
+<div><span class="tag tag-accent">Machine Learning Engineer</span></div>
+<h1 style="font-size:48px;letter-spacing:-.025em;margin:16px 0 8px">Katherine E. Link</h1>
+<div style="font-size:16px;color:var(--color-neutral-300);margin-bottom:16px">NYU OLAB</div>
+<div class="nm-row" style="margin-bottom:32px"></div>
+<div style="font-size:16px;line-height:1.7;color:var(--color-neutral-200);max-width:620px;display:flex;flex-direction:column;gap:14px"><p style="margin:0">Katherine “Katie” E. Link is an machine learning engineer, medical student, and scientist interested in solving problems in healthcare using machine learning. She has spent time at the Allen Institute for Brain Science and at Google-X as a AI Resident prior to coming to the Icahn School of Medicine as a medical student in 2020. Her primary interest is in computer vision, but she has a substantial background in electrophysiology due to her time with Project Amber. She is the lead engineer for NYUMets, and is dedicated towards using artificial intelligence to improve the care of patients with cancer.</p>
+</div>
+
+</div>
+</div>
+</main>
+<footer class="nm-foot">
+  <span>© 2026 NYUMets · NYU Grossman School of Medicine · NYU Center for Data Science</span>
+  <nav><a href="mailto:admin@nyumets.org">admin@nyumets.org</a></nav>
+</footer>
+
+</div>
+<script>
+document.querySelector('.nm-menu').addEventListener('click', function () {
+  var l = document.querySelector('.nm-links'); l.classList.toggle('open');
+  this.setAttribute('aria-expanded', l.classList.contains('open'));
+});
+</script>
+</body>
+</html>
